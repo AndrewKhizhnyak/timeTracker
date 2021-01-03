@@ -16,20 +16,20 @@ export default function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="Timer"
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
       <BottomTab.Screen
-        name="TabOne"
+        name="Timer"
         component={TabOneNavigator}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="alarm-outline" color={color} />,
         }}
       />
       <BottomTab.Screen
-        name="TabTwo"
+        name="History"
         component={TabTwoNavigator}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="file-tray-full-outline" color={color} />,
         }}
       />
     </BottomTab.Navigator>
@@ -52,7 +52,7 @@ function TabOneNavigator() {
       <TabOneStack.Screen
         name="TabOneScreen"
         component={TabOneScreen}
-        options={{ headerTitle: 'Tab One Title' }}
+        options={{ headerTitle: 'Timer' }}
       />
     </TabOneStack.Navigator>
   );
@@ -66,7 +66,7 @@ function TabTwoNavigator() {
       <TabTwoStack.Screen
         name="TabTwoScreen"
         component={TabTwoScreen}
-        options={{ headerTitle: 'Tab Two Title' }}
+        options={{ headerTitle: 'History' }}
       />
     </TabTwoStack.Navigator>
   );
